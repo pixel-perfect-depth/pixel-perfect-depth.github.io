@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pixel-perfect-depth</title>
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="./static/css/bulma.min.css"> -->
+    <!-- 这个不能加，否则会报错 -->
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<!-- cover -->
+<section>
+    <div class="jumbotron text-center mt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <!-- <h2></h2> -->
+                    <h3><strong>Pixel-Perfect Depth with Semantics-Guided Diffusion Transformers</strong></h3>
+                    <hr style="margin-top:0px">
+                    <div class="is-size-2 publication-authors text-center" style="margin-bottom: 10px;">
+                        <span class="author-block">
+                            <a href="https://gangweix.github.io/"><strong>Gangwei Xu</strong></a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://haotongl.github.io/"><strong>Haotong Lin</strong></a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Hongcheng Luo</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=1GCLBNAAAAAJ&hl=zh-CN&oi=ao"><strong>Xianqi Wang</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://jingfengyao.github.io/"><strong>Jingfeng Yao</strong></a> <sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=NvMHcs0AAAAJ&hl=zh-CN&oi=ao"><strong>Lianghui Zhu</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Yuechuan Pu</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Cheng Chi</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span><br>
+                        <span class="author-block">
+                            <strong>Haiyang Sun</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Bing Wang</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Guang Chen</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <strong>Hangjun Ye</strong><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://pengsida.net/"><strong>Sida Peng</strong></a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://sites.google.com/view/xinyang/home/publications"><strong>Xin Yang</strong></a><sup>1</sup>
+                        </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors text-center">
+                        <span class="author-block"><sup>1</sup><strong>HUST</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block"><sup>2</sup><strong>Xiaomi EV</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block"><sup>3</sup><strong>Zhejiang University</strong></span>
+                    </div>
+                    <!-- <div style="margin-top: 5px;"></div> -->
+                    <!-- <p style="color: rgb(51, 51, 51); font-size: 0.98em;">
+                        *denotes corresponding author
+                    </p> -->
+                    <br>
+                    <!-- <div style="margin-top: 20px;"></div> -->
+                    <div class="row justify-content-center">
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="assets/main_paper_with_supp.pdf" role="button" target="_blank">
+                                <i class="fa fa-file-o"></i> Paper </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2412.14015" role="button">
+                                <i class="fa fa-file-pdf-o"></i> arXiv </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/DepthAnything/PromptDA" role="button" target="_blank">
+                                <i class="fa fa-github"></i> Code </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://huggingface.co/spaces/depth-anything/PromptDA" role="button" target="_blank">
+                                <i class="fa fa-desktop"></i> Hugging Face </a></p>
+                        </div>
+                        <!-- <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="interactive.html" role="button">
+                                <i class="fa fa-hand-paper-o"></i> Interactive Results </a></p>
+                        </div> -->
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="javascript:void(0);" role="button" style="pointer-events: none; color: grey;">
+                                <i class="fa fa-database"></i> Dataset</a></p>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <video width="100%" playsinline autoplay loop preload="none" muted controls>
+                    <source src="assets/teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br><br>
+                <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 10px; padding-bottom: 10px;">
+                    <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 10px 0;">
+                        We present <strong>Pixel-Perfect Depth</strong>, a monocular depth estimation model with pixel-space diffusion transformers. 
+                        Compared to existing discriminative and generative models, its estimated depth maps can produce high-quality, flying-pixel-free point clouds, 
+                        without any post-processing.
+                    </h6>
+                    <!-- <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 10px 0;">
+                        <li style="margin-bottom: 5px;">We <strong>use prompting to unleash the power of depth foundation models</strong>, inspired by success of prompting in VLM and LLM foundation models.</li>
+                        <li style="margin-bottom: 5px;">The widely available iPhone LiDAR is taken as the prompt, guiding the model to produce up to <strong>4K resolution accurate metric depth.</strong></li>
+                        <li style="margin-bottom: 5px;">A scalable data pipeline is introduced to train our method; We <strong>release a more detailed depth annotation for ScanNet++</strong> dataset.</li>
+                        <li style="margin-bottom: 5px;">Prompt Depth Anything benefits downstream applications, including <strong>3D reconstruction</strong> and <strong>generalized robotic grasping</strong>.</li>
+                    </h6> -->
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Abstract</h3>
+                <hr style="margin-top:0px">
+                <img src="assets/teaser.jpg" width="100%">
+                <p class="text-left">This work presents <strong>Pixel-Perfect Depth</strong>, a monocular depth estimation model based on pixel-space diffusion generation that produces high-quality, flying-pixel-free point clouds from estimated depth maps. Current generative depth estimation models fine-tune Stable Diffusion and achieve impressive performance. However, they require a VAE to compress depth maps into latent space, which inevitably introduces flying pixels at edges and details.
+                    Our model addresses this challenge by directly performing diffusion generation in the pixel space, avoiding VAE-induced artifacts. To tackle the resulting complexity of high-resolution generation, we introduce two novel designs: 1) <strong>Semantics-Guided Diffusion Transformers (DiT)</strong> that extracts high-level semantic representations from vision foundation models to guide the diffusion process, enabling accurate modeling of both global image structures and fine-grained details; and 2)  <strong>Cascade DiT Design</strong> that progressively increases the number of patches to further enhance efficiency and accuracy. Our model achieves the best performance among all published generative models across five benchmarks, and significantly outperforms all other models in edge-aware point cloud evaluation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<!-- <section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Comparisons with Monocular Depth Methods</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+                <video class='single_image_video' controls preload="metadata" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-york">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-berliner">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">Monocular depth methods can generate high-res depth maps, <strong>but struggle with consistent metric scale information</strong>, even after aligning with LiDAR.</h6>
+        </div>
+    </div>
+</section> -->
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Validation of flying pixels in different types of VAEs</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <!-- 替换视频为图片 -->
+        <div class="text-center">
+            <img src="assets/vae_comp.jpg" alt="Comparison with VAEs" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                We present qualitative comparisons showing that increasing the latent dimension in VAEs fails to eliminate flying pixels. VAE-d4 (SD2) denotes the reconstruction of ground truth depth maps using the VAE from Stable Diffusion 2, with a latent dimension of 4, which is also used in Marigold. VAE-d16 (SD3.5) uses the VAE from Stable Diffusion 3.5, which has a latent dimension of 16.
+            </h6>
+        </div>
+    </div>
+</section>
+
+<br>
+<div style="height: 20px;"></div>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Overview of Pixel-Perfect Depth</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <!-- 替换视频为图片 -->
+        <div class="text-center">
+            <img src="assets/network.jpg" alt="Network" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                Given an input image, we concatenate it with noise and feed it into the proposed Cascade DiT. Meanwhile, the image is also processed by a pretrained encoder from Vision Foundation Models to extract high-level semantics, forming our Semantics-Guided DiT. We perform diffusion generation directly in pixel space without using any VAE.
+            </h6>
+        </div>
+    </div>
+</section>
+
+<br>
+<div style="height: 20px;"></div>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Qualitative Point Cloud Results in Complex Scenes</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <!-- 替换视频为图片 -->
+        <div class="text-center">
+            <img src="assets/pc_comp.jpg" alt="Qualitative Point Cloud Results in Complex Scenes" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                Our model produces significantly fewer flying pixels compared to other depth estimation models, with depth maps overlaid on the point clouds for visualization.
+            </h6>
+        </div>
+    </div>
+</section>
+
+<br>
+<div style="height: 20px;"></div>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Qualitative Ablations for Semantics-Guided DiT (SG-DiT)</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <!-- 替换视频为图片 -->
+        <div class="text-center">
+            <img src="assets/sg_dit.jpg" alt="Qualitative Ablations for Semantics-Guided DiT (SG-DiT)" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                From top to bottom: input images from five benchmarks, results without SG-DiT, and results with SG-DiT. Without SG-DiT, the pixel-space DiT model struggles to model global image structures and fine-grained details effectively.
+            </h6>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Qualitative comparisons with MoGe</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <!-- 替换视频为图片 -->
+        <div class="text-center">
+            <img src="assets/comp_moge.jpg" alt="Qualitative comparisons with MoGe" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                We provide qualitative comparisons with the concurrent work MoGe. Top: input images are taken from four test sets: Hypersim, DIODE, ScanNet, and ETH3D. Middle: results of MoGe. Bottom: our results. As a discriminative model, MoGe, like previous discriminative models, also suffers from flying pixels at edges and details.
+            </h6>
+        </div>
+    </div>
+</section>
+
+
+
+<br>
+
+<!-- <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4>Acknowledgements</h4>
+                <hr style="margin-top:0px">
+                <p class="text-left">We thank the generous support from Prof. <a href="https://wnzhang.net/" target="_blank">Weinan Zhang</a> for robot experiments, including the space, objects and the Unitree H1 robot. We also thank <a href="https://scholar.google.com/citations?user=ozatRA0AAAAJ">Zhengbang Zhu</a>, Jiahang Cao, Xinyao Li, Wentao Dong for their help in setting up the robot platform and collecting robot data.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4>Citation</h4>
+            <hr style="margin-top:0px">
+            <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@inproceedings{lin2024promptda,
+  title={Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation},
+  author={Lin, Haotong and Peng, Sida and Chen, Jingxiao and Peng, Songyou and Sun, Jiaming and Liu, Minghuan and Bao, Hujun and Feng, Jiashi and Zhou, Xiaowei and Kang, Bingyi},
+  journal={arXiv},
+  year={2024}
+}</code></pre>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center" style="margin-bottom:10px">
+    Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template. 
+    Thanks to <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> for the useful add-ons.
+    Thanks to <a href="https://github.com/nerfstudio-project/viser" target="_blank">Viser</a> for the useful add-ons.
+</footer>
+
+</body>
+</html>
