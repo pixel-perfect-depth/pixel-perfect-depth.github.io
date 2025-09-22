@@ -96,7 +96,7 @@
                                 <i class="fa fa-file-pdf-o"></i> arXiv </a></p>
                         </div>
                         <div class="col-auto" style="padding: 0 1px;">
-                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/DepthAnything/PromptDA" role="button" target="_blank">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/gangweix/pixel-perfect-depth" role="button" target="_blank">
                                 <i class="fa fa-github"></i> Code </a></p>
                         </div>
                         <div class="col-auto" style="padding: 0 1px;">
@@ -154,7 +154,7 @@
                 <hr style="margin-top:0px">
                 <img src="assets/teaser.jpg" width="100%">
                 <p class="text-left">This work presents <strong>Pixel-Perfect Depth</strong>, a monocular depth estimation model based on pixel-space diffusion generation that produces high-quality, flying-pixel-free point clouds from estimated depth maps. Current generative depth estimation models fine-tune Stable Diffusion and achieve impressive performance. However, they require a VAE to compress depth maps into latent space, which inevitably introduces flying pixels at edges and details.
-                    Our model addresses this challenge by directly performing diffusion generation in the pixel space, avoiding VAE-induced artifacts. To tackle the resulting complexity of high-resolution generation, we introduce two novel designs: 1) <strong>Semantics-Guided Diffusion Transformers (DiT)</strong> that extracts high-level semantic representations from vision foundation models to guide the diffusion process, enabling accurate modeling of both global image structures and fine-grained details; and 2)  <strong>Cascade DiT Design</strong> that progressively increases the number of patches to further enhance efficiency and accuracy. Our model achieves the best performance among all published generative models across five benchmarks, and significantly outperforms all other models in edge-aware point cloud evaluation.</p>
+                    Our model addresses this challenge by directly performing diffusion generation in the pixel space, avoiding VAE-induced artifacts. To tackle the resulting complexity of high-resolution generation, we introduce two novel designs: 1) <strong>Semantics-Prompted Diffusion Transformers (DiT)</strong> that extracts high-level semantic representations from vision foundation models to guide the diffusion process, enabling accurate modeling of both global image structures and fine-grained details; and 2)  <strong>Cascade DiT Design</strong> that progressively increases the number of patches to further enhance efficiency and accuracy. Our model achieves the best performance among all published generative models across five benchmarks, and significantly outperforms all other models in edge-aware point cloud evaluation.</p>
             </div>
         </div>
     </div>
@@ -230,7 +230,7 @@
 
         <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
             <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
-                Given an input image, we concatenate it with noise and feed it into the proposed Cascade DiT. Meanwhile, the image is also processed by a pretrained encoder from Vision Foundation Models to extract high-level semantics, forming our Semantics-Guided DiT. We perform diffusion generation directly in pixel space without using any VAE.
+                Given an input image, we concatenate it with noise and feed it into the proposed Cascade DiT. Meanwhile, the image is also processed by a pretrained encoder from Vision Foundation Models to extract high-level semantics, forming our Semantics-Prompted DiT. We perform diffusion generation directly in pixel space without using any VAE.
             </h6>
         </div>
     </div>
@@ -265,18 +265,18 @@
 <section>
     <div class="container">
         <div class="col-12 text-center">
-            <h3>Qualitative Ablations for Semantics-Guided DiT (SG-DiT)</h3>
+            <h3>Qualitative Ablations for Semantics-Prompted DiT (SP-DiT)</h3>
             <hr style="margin-top:0px">
         </div>
 
         <!-- 替换视频为图片 -->
         <div class="text-center">
-            <img src="assets/sg_dit.jpg" alt="Qualitative Ablations for Semantics-Guided DiT (SG-DiT)" style="max-width: 80%; height: auto; margin-bottom: 20px;">
+            <img src="assets/sg_dit.jpg" alt="Qualitative Ablations for Semantics-Prompted DiT (SP-DiT)" style="max-width: 80%; height: auto; margin-bottom: 20px;">
         </div>
 
         <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
             <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
-                From top to bottom: input images from five benchmarks, results without SG-DiT, and results with SG-DiT. Without SG-DiT, the pixel-space DiT model struggles to model global image structures and fine-grained details effectively.
+                From top to bottom: input images from five benchmarks, results without SP-DiT, and results with SP-DiT. Without SP-DiT, the pixel-space DiT model struggles to model global image structures and fine-grained details effectively.
             </h6>
         </div>
     </div>
