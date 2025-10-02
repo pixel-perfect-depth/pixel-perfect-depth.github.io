@@ -156,7 +156,9 @@
                 <hr style="margin-top:0px">
                 <img src="assets/teaser.jpg" width="100%">
                 <p class="text-left">This work presents <strong>Pixel-Perfect Depth</strong>, a monocular depth estimation model based on pixel-space diffusion generation that produces high-quality, flying-pixel-free point clouds from estimated depth maps. Current generative depth estimation models fine-tune Stable Diffusion and achieve impressive performance. However, they require a VAE to compress depth maps into latent space, which inevitably introduces flying pixels at edges and details.
-                    Our model addresses this challenge by directly performing diffusion generation in the pixel space, avoiding VAE-induced artifacts. To tackle the resulting complexity of high-resolution generation, we introduce two novel designs: 1) <strong>Semantics-Prompted Diffusion Transformers (DiT)</strong> that extracts high-level semantic representations from vision foundation models to guide the diffusion process, enabling accurate modeling of both global image structures and fine-grained details; and 2)  <strong>Cascade DiT Design</strong> that progressively increases the number of patches to further enhance efficiency and accuracy. Our model achieves the best performance among all published generative models across five benchmarks, and significantly outperforms all other models in edge-aware point cloud evaluation.</p>
+                    Our model addresses this challenge by directly performing diffusion generation in the pixel space, avoiding VAE-induced artifacts. To overcome the high complexity associated with pixel-space generation, we introduce two novel designs: 1) <strong>Semantics-Prompted Diffusion Transformers (DiT)</strong>, which incorporate semantic representations from vision foundation models
+into DiT to prompt the diffusion process, thereby preserving global semantic consistency while enhancing fine-grained visual details; and 2)  <strong>Cascade DiT Design</strong> that progressively increases the number of tokens to further enhance efficiency and
+accuracy. Our model achieves the best performance among all published generative models across five benchmarks, and significantly outperforms all other models in edge-aware point cloud evaluation.</p>
             </div>
         </div>
     </div>
@@ -278,7 +280,7 @@
 
         <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
             <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
-                From top to bottom: input images from five benchmarks, results without SP-DiT, and results with SP-DiT. Without SP-DiT, the pixel-space DiT model struggles to model global image structures and fine-grained details effectively.
+                From top to bottom: input images from five benchmarks, results without SP-DiT, and results with SP-DiT. Without SP-DiT, the DiT model struggles with preserving global semantics and generating fine-grained visual details.
             </h6>
         </div>
     </div>
